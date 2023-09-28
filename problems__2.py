@@ -23,13 +23,14 @@ print(next(iter(s)))
 import random
 
 def normal(x):
+  l1 = []
   for i in range(10):
-    return x*random.randint(1,10)
+    l1.append(x*random.randint(1,10))
+  return l1
 
 def abnormal(x):
   for i in range(10):
     yield x*random.randint(1,10)
-    
     
 print(normal(10))
 print(list(abnormal(10)))
